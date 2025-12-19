@@ -1,0 +1,138 @@
+body {
+    font-family: raleway, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("img/abstract-background-light-steel-blue-wallpaper-image.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid black; /* Linha de destaque */
+}
+
+.profile-pic{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Torna a imagem circular */
+    border: 4px solid black; /* Borda branca ao redor da imagem */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Sombra para destaque */
+    display: block;
+    margin: 20px auto; /* Centraliza a imagem */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;  /*Espaçamento interno do botão */
+    margin-right: 20px;  /* Espaçamento entre botões */
+    background-color: #0056;
+    color: white;
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+ }
+
+.button:hover {
+    background-color: #004494; /* Cor ao passar o mouse */
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0056;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid lightblue;
+    margin: 20px 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    line-height: 1.6;
+    line-height: 1.9;
+}
+
+h2 {
+    text-align: center;
+}
+
+.skills-list {
+    line-height: 1.8;
+}
+
+.html-icon::before {
+    background-image: url('https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg');
+    background-size: 20px;
+    content: "";
+    padding-left: 30px;
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
+}
+
+.css-icon::before {
+    background-image: url('https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg');
+    background-size: 20px;
+    content: "";
+    padding-left: 30px;
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
+}
+
+.jv-icon::before {
+    background-image: url('https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg');
+    background-size: 20px;
+    content: "";
+    padding-left: 30px;
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
+}
+
+.python-icon::before {
+    background-image: url('https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg');
+    background-size: 20px;
+    content: "";
+    padding-left: 30px;
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
+}
+
+.react-icon::before {
+    background-image: url('https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg');
+    background-size: 20px;
+    content: "";
+    padding-left: 30px;
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
+}
+
+.projects {
+    line-height: 1.8;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
