@@ -35,5 +35,5 @@ Se o site já estiver publicado (ex: GitHub Pages ou Vercel), você pode acessá
 
 Sinta-se à vontade para entrar em contato comigo para trocar ideias ou oportunidades:
 
-- **LinkedIn:** [linkedin.com/in/seu-perfil](https://linkedin.com/in/seu-perfil)
-- **Email:** seu-email@exemplo.com
+- **LinkedIn:** **EM MODIFICAÇÃO**
+- **Email:** eduardoqueirozcarvalho978@gmail.com
