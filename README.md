@@ -14,8 +14,7 @@ Neste projeto, utilizei as seguintes tecnologias:
 
 * **HTML5** - Estrutura do conteúdo.
 * **CSS3** - Estilização e design responsivo (utilizando Flexbox/Grid).
-* **JavaScript** - Funcionalidades interativas (se houver).
-* *(Opcional: Adicione aqui frameworks como React, Tailwind ou bibliotecas específicas)*
+* **ATÉ O MOMENTO**
 
 ## 🚀 Funcionalidades
 
@@ -29,10 +28,6 @@ Neste projeto, utilizei as seguintes tecnologias:
 
 Se o site já estiver publicado (ex: GitHub Pages ou Vercel), você pode acessá-lo aqui:
 👉 [**Link para o meu Portfólio**](https://seu-usuario.github.io/seu-repositorio)
-
-Caso queira rodar localmente:
-1. Caso queira ver: https://duarkyzz.github.io/Portfolio/
-2. Abra o arquivo `index.html` no seu navegador.
 
 ---
 
