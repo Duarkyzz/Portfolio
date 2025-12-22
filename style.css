@@ -41,11 +41,11 @@ header {
 }
 
 .content {
+    background: linear-gradient(to bottom, #95dcf1, #4a6870);
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #0056;
-    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
 
