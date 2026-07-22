@@ -3,6 +3,8 @@ header {
     padding: 28px 8%
 }
 
+/* Estilização do menu de navegação */
+
 #navbar {
     display: flex;
     justify-content: center;
@@ -24,6 +26,8 @@ header {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  /* adiciona sombra */
 }
 
+/* Estilização dos itens do menu de navegação */
+
 .nav-item a {
     text-decoration: none;
     color: #f5f4f4ad;
@@ -37,9 +41,13 @@ header {
     color: #a88740;
 }
 
+/* Estilização do menu mobile */
+
 #mobile_menu {
     display: none; /* Oculta o menu mobile por padrão */
 }
+
+/* Efeito de sublinhado ao passar o mouse sobre os itens do menu de navegação */
 
 .nav-item a:hover::after { /* Adiciona o efeito de sublinhado ao passar o mouse */
     transform: translateX(-50%) scaleX(1);
@@ -56,5 +64,28 @@ header {
     transform: translateX(-50%) scaleX(0); 
     transform-origin: center;
     transition: transform 0.3s ease-in-out;
+}
+
+/* Hero bar */
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.hero-content {
+    font-size: 16px;
+    color: #f5f4f4ad;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.hero-image {
+    width: 250px;
+    height: 250px;
+    background: gray;
+    border-radius: 50%;
 }
 
