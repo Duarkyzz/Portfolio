@@ -72,20 +72,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    padding: 0 8%;
+    gap: 50px;
+    height: 100vh;
 }
 
-.hero-content {
-    font-size: 16px;
-    color: #f5f4f4ad;
-    text-align: left;
-    line-height: 1.5;
-}
-
-.hero-image {
-    width: 250px;
-    height: 250px;
-    background: gray;
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
     border-radius: 50%;
+
 }
 
