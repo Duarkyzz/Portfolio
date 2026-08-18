@@ -18,7 +18,6 @@ header {
     list-style: none;
     gap: 58px;
 
-    list-style: none;
     padding: 10px 20px; /* adiciona espaçamento interno */
     border-radius: 999px; /* arredonda as bordas */
     background-color: #2A1F4A;
@@ -66,11 +65,71 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Luzes de vidro */
+
+.glass-light {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    z-index: 0;
+}
+
+.light-one {
+    background: rgba(224, 168, 255, 0.35);
+
+    top: 10%;
+    left: 5%;
+}
+
+.light-two {
+    background: rgba(169, 148, 255, 0.3);
+
+    bottom: 5%;
+    right: 10%;
+}
+
+/* Hero card */
+
+.hero-card {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+
+    width: 100%;
+    height: 600px;
+    padding: 180px;
+
+    border-radius: 20px;
+
+    background: rgba(42, 31, 74, 0.25);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transform: translateY(-100px);
+    box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.container-left {
+    position: relative;
+    left: -70px;
+}
+
+
 /* Hero bar */
 
 #hero {
     display: flex;
-    justify-content: center;
+    justify-content: flex;
     align-items: center;
     padding: 0 8%;
     gap: 50px;
@@ -91,21 +150,38 @@ header {
 .hero-content span {
     font-size: 24px;
     color: #A994FF;
-    margin-bottom: 20px;
 }
 
 .hero-image img {
     width: 100%;
-    max-width: 500px;
+    border: 3px solid #584164;
+    border-radius: 20px;
+    margin-right: 10px;
+    max-width: 400px;
     border-radius: 50%;
+    transform: translateX(-100px);
 
+    box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px;
 }
 
 .hero-buttons a {
     display: flex;
-    justify-self: center;
+    justify-content: space-between;
     list-style: none;
-    gap: 58px;
+    gap: 10px;
+    margin-top: 40px;
+    Text-decoration: none;
+
+    color: #E0A8FF;
+    font-weight: 600;
+    font-size: 16px;
 
     list-style: none;
     padding: 10px 20px; /* adiciona espaçamento interno */
