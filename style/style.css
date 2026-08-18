@@ -8,6 +8,11 @@
 }
 
 body {
-    background-color: #1d1c1c;
+    background: linear-gradient(
+    135deg,
+    #0F172A,
+    #1B1230,
+    #151515
+);
 }
 

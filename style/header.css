@@ -21,7 +21,7 @@ header {
     list-style: none;
     padding: 10px 20px; /* adiciona espaçamento interno */
     border-radius: 999px; /* arredonda as bordas */
-    background-color: #2A2A2A;
+    background-color: #2A1F4A;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  /* adiciona sombra */
 }
@@ -38,7 +38,7 @@ header {
 }
 
 .nav-item.active a {
-    color: #a88740;
+    color: #E0A8FF;
 }
 
 /* Estilização do menu mobile */
@@ -60,7 +60,7 @@ header {
     bottom: -4px;
     width: 100% ;
     height: 2px;
-    background-color: #a88740;
+    background-color: #9872AD;
     transform: translateX(-50%) scaleX(0); 
     transform-origin: center;
     transition: transform 0.3s ease-in-out;
@@ -77,10 +77,41 @@ header {
     height: 100vh;
 }
 
+.hero-content p {
+    max-width: 600px;
+    color: #A994FF;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: #E0A8FF;
+    margin-bottom: 20px;
+}
+
+.hero-content span {
+    font-size: 24px;
+    color: #A994FF;
+    margin-bottom: 20px;
+}
+
 .hero-image img {
     width: 100%;
     max-width: 500px;
     border-radius: 50%;
 
+}
+
+.hero-buttons a {
+    display: flex;
+    justify-self: center;
+    list-style: none;
+    gap: 58px;
+
+    list-style: none;
+    padding: 10px 20px; /* adiciona espaçamento interno */
+    border-radius: 999px; /* arredonda as bordas */
+    background-color: #2A1F4A;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);     
 }
 
