@@ -1,7 +1,7 @@
 # 💻 Portfólio — Dudz
 
-> Portfólio pessoal desenvolvido para apresentar minhas habilidades,
-> projetos e trajetória na área de tecnologia.
+ Portfólio pessoal desenvolvido para apresentar minhas habilidades,
+ projetos e trajetória na área de tecnologia.
 
 ## 🚀 Sobre o site
 
