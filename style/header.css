@@ -101,8 +101,8 @@ header {
     position: relative;
 
     width: 100%;
-    height: 600px;
-    padding: 180px;
+    height: 700px;
+    padding: 130px;
 
     border-radius: 20px;
 
@@ -137,8 +137,23 @@ header {
 }
 
 .hero-content p {
-    max-width: 600px;
+    max-width: 400px;
+    line-height: 1.4;
+    text-align: left;
+    font-size: 18px;
     color: #A994FF;
+
+    background: rgba(42, 31, 74, 0.25);
+    border-radius: 20px;
+    width: 100%;
+
+    width: 100%;
+    padding: 20px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .hero-content h1 {
