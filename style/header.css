@@ -94,11 +94,46 @@ header {
 
 /* Hero card */
 
+.skills-panel {
+
+    width: 400px;
+    height: 500px;
+
+}
+
+.skills-panel h1 {
+    font-size: 48px;
+    color: #E0A8FF;
+    margin-bottom: 20px;
+}
+
+.skills-panel p {
+    font-size: 18px;
+    color: #A994FF;
+
+    width: 100%;
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: rgba(42, 31, 74, 0.25);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
 .hero-card {
     display: flex;
     align-items: center;
     z-index: 1;
     position: relative;
+    justify-content: space-between;
 
     width: 100%;
     height: 700px;
@@ -121,7 +156,7 @@ header {
 
 .container-left {
     position: relative;
-    left: -70px;
+    left: -90px;
 }
 
 
@@ -129,11 +164,17 @@ header {
 
 #hero {
     display: flex;
-    justify-content: flex;
+    justify-content: center;
     align-items: center;
-    padding: 0 8%;
+    padding: 0 2%;
     gap: 50px;
     height: 100vh;
+}
+
+.hero-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .hero-content p {
@@ -154,6 +195,10 @@ header {
     -webkit-backdrop-filter: blur(20px);
 
     border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
 }
 
 .hero-content h1 {
