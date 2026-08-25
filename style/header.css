@@ -40,10 +40,63 @@ header {
     color: #E0A8FF;
 }
 
+/* Foco visível no teclado (acessibilidade) */
+
+.nav-item a:focus-visible,
+.hero-buttons a:focus-visible,
+#hamburger:focus-visible {
+    outline: 2px solid #E0A8FF;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* Botão hambúrguer (só aparece no mobile) */
+
+#hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    width: 40px;
+    height: 40px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #E0A8FF;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Anima o ícone para um "X" quando o menu está aberto */
+
+#hamburger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#hamburger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 /* Estilização do menu mobile */
 
 #mobile_menu {
-    display: none; /* Oculta o menu mobile por padrão */
+    display: none; /* Oculto por padrão (some completamente no desktop) */
 }
 
 /* Efeito de sublinhado ao passar o mouse sobre os itens do menu de navegação */
@@ -188,7 +241,6 @@ header {
 
     background: rgba(42, 31, 74, 0.25);
     border-radius: 20px;
-    width: 100%;
 
     width: 100%;
     padding: 20px;
@@ -239,7 +291,7 @@ header {
     list-style: none;
     gap: 10px;
     margin-top: 40px;
-    Text-decoration: none;
+    text-decoration: none;
 
     color: #E0A8FF;
     font-weight: 600;
@@ -253,35 +305,161 @@ header {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);     
 }
 
-@media (max-width: 768px) {
-    .hero-main {
-        flex-direction: column;   /* empilha foto e texto ao invés de lado a lado */
-        text-align: center;
-    }
+/* ================================
+   Responsividade — Tablets (≤ 900px)
+   ================================ */
 
+@media (max-width: 900px) {
     .hero-card {
-        height: auto;             /* remove a altura fixa de 700px */
-        padding: 40px 20px;       /* remove o padding gigante de 130px */
-        flex-direction: column;
-        transform: none;          /* remove o translateY(-100px) */
+        padding: 80px 60px;
     }
 
     .container-left {
-        left: 0;                  /* remove o deslocamento de -90px */
+        left: -40px;
     }
 
     .hero-image img {
-        transform: none;          /* remove o translateX(-100px) */
-        max-width: 220px;
+        max-width: 300px;
+        transform: translateX(-40px);
+    }
+}
+
+/* ================================
+   Responsividade — Celulares (≤ 768px)
+   ================================ */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 6%;
     }
 
+    /* troca o menu de pílula pelo hambúrguer */
     #nav_list {
-        gap: 20px;                 /* o gap de 58px não cabe em tela pequena */
-        padding: 8px 12px;
+        display: none;
+    }
+
+    #hamburger {
+        display: flex;
+    }
+
+    #mobile_menu {
+        position: absolute;
+        top: 75px;
+        right: 6%;
+        left: 6%;
+        z-index: 20;
+
+        background-color: #2A1F4A;
+        border-radius: 20px;
+        padding: 20px 25px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    /* só mostra quando a classe "open" for adicionada via JS */
+    #mobile_menu:not(.open) {
+        display: none;
+    }
+
+    #mobile_nav_list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+    }
+
+    #mobile_nav_list a {
+        text-decoration: none;
+        color: #f5f4f4;
+        font-weight: 600;
+        font-size: 18px;
+        display: block;
+        padding: 6px 0;
+    }
+
+    #hero {
+        height: auto;
+        padding: 120px 0 60px;
+    }
+
+    .hero-card {
+        height: auto;
+        padding: 30px 20px;
+        transform: none;
+    }
+
+    .hero-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-left {
+        left: 0;
+    }
+
+    .hero-image img {
+        transform: none;
+        max-width: 200px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-buttons a {
+        margin-top: 20px;
     }
 
     .skills-panel {
         width: 100%;
         height: auto;
+        margin-top: 30px;
+    }
+
+    .glass-light {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* ================================
+   Responsividade — Celulares pequenos (≤ 400px)
+   ================================ */
+
+@media (max-width: 400px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .skills-panel h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons a {
+        justify-content: center;
+    }
+}
+
+/* ================================
+   Acessibilidade — respeita quem prefere menos animação
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
     }
 }
