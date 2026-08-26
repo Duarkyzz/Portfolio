@@ -42,3 +42,16 @@ document.addEventListener('keydown', (event) => {
 document.querySelectorAll('#mobile_nav_list a').forEach((link) => {
     link.addEventListener('click', closeMenu);
 });
+
+const herocard = document.querySelector('.hero-card');
+
+herocard.addEventListener('mousemove', (e) => {
+    const rect = herocard.getBoundingClientRect(); // posição do card na tela
+    const x = e.clientX - rect.left;                // posição do mouse RELATIVA ao card
+    const y = e.clientY - rect.top;
+
+    console.log("mouse em:", x, y);
+
+    herocard.style.setProperty('--mouse-x', `${x}px`);
+    herocard.style.setProperty('--mouse-y', `${y}px`);
+});

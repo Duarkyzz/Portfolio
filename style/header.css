@@ -184,6 +184,7 @@ header {
 /* Hero card */
 
 .hero-card {
+    overflow: hidden;
     display: flex;
     align-items: center;
     z-index: 1;
@@ -207,6 +208,31 @@ header {
     box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.15),
     inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.hero-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle 150px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(224, 168, 255, 0.15),
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.hero-card:hover::before {
+    opacity: 1;
+}
+
+.hero-main,
+.skills-panel {
+    position: relative;
+    z-index: 1;
 }
 
 .container-left {
