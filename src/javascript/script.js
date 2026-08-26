@@ -43,15 +43,31 @@ document.querySelectorAll('#mobile_nav_list a').forEach((link) => {
     link.addEventListener('click', closeMenu);
 });
 
-const herocard = document.querySelector('.hero-card');
+// Controla o efeito de hover no card da hero section
 
-herocard.addEventListener('mousemove', (e) => {
-    const rect = herocard.getBoundingClientRect(); // posição do card na tela
-    const x = e.clientX - rect.left;                // posição do mouse RELATIVA ao card
+const heroCard = document.querySelector('.hero-card');
+
+heroCard.addEventListener('mousemove', (e) => {
+    const rect = heroCard.getBoundingClientRect();
+    const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    console.log("mouse em:", x, y);
+    // luz (já existente)
+    heroCard.style.setProperty('--mouse-x', `${x}px`);
+    heroCard.style.setProperty('--mouse-y', `${y}px`);
 
-    herocard.style.setProperty('--mouse-x', `${x}px`);
-    herocard.style.setProperty('--mouse-y', `${y}px`);
+    // NOVO: inclinação baseada na distância até o centro do card
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateY = ((x - centerX) / centerX) * 4;   // até 4° pros lados
+    const rotateX = ((y - centerY) / centerY) * -4;  // até 4° pra cima/baixo (invertido)
+
+    heroCard.style.setProperty('--rotate-x', `${rotateX}deg`);
+    heroCard.style.setProperty('--rotate-y', `${rotateY}deg`);
+});
+
+heroCard.addEventListener('mouseleave', () => {
+    heroCard.style.setProperty('--rotate-x', '0deg');
+    heroCard.style.setProperty('--rotate-y', '0deg');
 });
