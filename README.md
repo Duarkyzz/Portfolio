@@ -30,3 +30,7 @@ entrar em contato diretamente comigo!
 
 O projeto possui uma interface personalizada, com foco em uma
 experiência visual moderna e minimalista.
+
+## 💻 Link para acessar o site!!
+
+https://duarkyzz.github.io/Portfolio/
