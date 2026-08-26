@@ -147,6 +147,72 @@ header {
 
 /* Skills painel*/
 
+.skills-carousel {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 25px;
+    cursor: grab;
+
+    padding: 20px;
+    position: relative;
+    top: 100px;
+    left: -60px;
+    border-radius: 20px;
+
+    background: rgba(42, 31, 74, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.skills-carousel.dragging {
+    cursor: grabbing;
+}
+
+.skills-track {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: max-content;
+    animation: rolar 20s linear infinite;
+}
+
+.skills-track img {
+    height: 48px;
+    width: 48px;
+    padding: 8px;
+    box-sizing: content-box;
+
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-carousel:hover .skills-track {
+    animation-play-state: paused;
+}
+
+.skills-track img:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 14px 28px rgba(0, 0, 0, 0.5),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes rolar {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
 .skills-panel {
 
     width: 400px;
@@ -214,7 +280,7 @@ header {
     0 8px 32px rgba(0, 0, 0, 0.15),
     inset 0 1px 1px rgba(255, 255, 255, 0.08);
 
-    --rotate-x: 0deg;
+        --rotate-x: 0deg;
     --rotate-y: 0deg;
 
     transform: translateY(-100px) rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
@@ -436,7 +502,6 @@ header {
     }
 
     #hero {
-        perspective: 1200px;
         height: auto;
         padding: 120px 0 60px;
     }

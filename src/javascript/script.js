@@ -71,3 +71,6 @@ heroCard.addEventListener('mouseleave', () => {
     heroCard.style.setProperty('--rotate-x', '0deg');
     heroCard.style.setProperty('--rotate-y', '0deg');
 });
+
+
+
