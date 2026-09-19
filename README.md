@@ -1,32 +1,28 @@
-# 💻 Portfólio — Dudz
+# Eduardo Queiroz — Python & Automações
 
- Portfólio pessoal desenvolvido para apresentar minhas habilidades,
- projetos e trajetória na área de tecnologia.
+Portfólio estático em HTML, CSS e JavaScript. Extraia a pasta e abra index.html no navegador. Não exige instalação nem servidor.
 
-## 🚀 Sobre o site
+## O que mudou
+- Identidade escura e roxa preservada, com cartões translúcidos e layout em grid.
+- Apresentação direcionada a Python e automações.
+- Seções reais de automações, projetos pessoais, sobre e contato.
+- Menu mobile corrigido, com fechamento por Escape, clique fora e navegação.
+- Links acessíveis pelo teclado e navegação disponível mesmo sem JavaScript.
+- Foto em WebP para carregamento mais leve; original preservada nos arquivos.
+- Fontes do sistema e tecnologias em texto, sem depender de imagens externas.
 
-Este projeto é meu portfólio pessoal, desenvolvido com foco em
-apresentar minhas habilidades como desenvolvedor e reunir meus
-principais projetos em um único lugar, e que o cliente que deseja
-saber mais sobre meu trabalho, poder olhar meu currículo e poder
-entrar em contato diretamente comigo!
+## Onde editar
+- index.html: textos, projetos, telefone do WhatsApp e currículo.
+- style/style.css: cores, fontes e estilos compartilhados.
+- style/header.css: composição das seções e regras para telas menores.
+- src/javascript/script.js: menu do celular.
 
-## 🛠️ Tecnologias utilizadas
+Os serviços são ideias de demandas a desenvolver, não cases de clientes. StatusWatch e CodePulse estão apresentados como projetos pessoais. O currículo é o PDF original enviado e pode precisar de atualização antes de divulgar a página.
 
-- HTML5
-- CSS3
-- JavaScript
+## Verificação desta revisão
+Verificados: destinos internos, existência dos recursos locais, IDs únicos, um H1 e sintaxe JavaScript. Validação visual e interações em navegador ficaram pendentes por indisponibilidade do navegador de testes. Confira em desktop e celular antes de publicar. Nenhuma publicação foi realizada.
 
-## ✨ Funcionalidades
+O ZIP contém os arquivos do site, sem metadados do Git. Para atualizar seu repositório, copie estes arquivos para sua pasta de trabalho, mantendo a pasta .git que já existe nela.
 
-- Página inicial com apresentação
-- Seção sobre mim
-- Apresentação de habilidades
-- Projetos desenvolvidos
-- Links para contato e redes profissionais
-- Design responsivo
-
-## 🎨 Design
-
-O projeto possui uma interface personalizada, com foco em uma
-experiência visual moderna e minimalista.
+## Animações suaves
+Entrada das seções ao rolar, flutuação discreta da foto e feedback nos cartões e botões. As entradas acontecem uma única vez. A preferência do sistema por movimento reduzido desativa as animações, inclusive se alterada durante a visita. Sem JavaScript, todo o conteúdo permanece visível. CodePulse é apresentado como projeto em fase inicial.

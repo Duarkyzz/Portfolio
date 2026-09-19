@@ -1,76 +1,58 @@
-// Controla o menu mobile (hambúrguer)
-
+// Sem JavaScript, os links continuam visíveis. Com JS, ativamos o menu mobile.
+document.documentElement.classList.add('js');
 const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile_menu');
+const menu = document.getElementById('nav-links');
+hamburger.hidden = false;
 
-function openMenu() {
-    mobileMenu.classList.add('open');
-    hamburger.setAttribute('aria-expanded', 'true');
-}
-
-function closeMenu() {
-    mobileMenu.classList.remove('open');
+function closeMenu(returnFocus = false) {
+    menu.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Abrir menu');
+    if (returnFocus) hamburger.focus();
 }
+hamburger.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    hamburger.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+});
+menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => closeMenu()));
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menu.classList.contains('open')) closeMenu(true);
+});
+document.addEventListener('click', event => {
+    if (!menu.contains(event.target) && !hamburger.contains(event.target)) closeMenu();
+});
+window.matchMedia('(min-width: 761px)').addEventListener('change', () => closeMenu());
 
-function toggleMenu() {
-    const isOpen = mobileMenu.classList.contains('open');
-    isOpen ? closeMenu() : openMenu();
+// Animações de entrada: o conteúdo continua visível caso a API não exista.
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const entranceAnimations = new Set();
+let entranceObserver;
+
+function setupEntrances() {
+    entranceObserver?.disconnect();
+    entranceAnimations.forEach(animation => animation.cancel());
+    entranceAnimations.clear();
+    if (motionPreference.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
+
+    entranceObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const element = entry.target;
+            entranceObserver.unobserve(element);
+            if (element.dataset.entered) return;
+            element.dataset.entered = 'true';
+            const animation = element.animate([
+                { opacity: 0, transform: 'translateY(18px)' },
+                { opacity: 1, transform: 'translateY(0)' }
+            ], { duration: 650, easing: 'cubic-bezier(.2,.65,.3,1)' });
+            entranceAnimations.add(animation);
+            animation.onfinish = () => entranceAnimations.delete(animation);
+        });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.hero-copy, .tech-strip, .section-heading, .card, .about > div, .contact')
+        .forEach(element => entranceObserver.observe(element));
 }
-
-hamburger.addEventListener('click', (event) => {
-    event.stopPropagation(); // impede que esse clique já feche o menu pelo listener abaixo
-    toggleMenu();
-});
-
-// Fecha o menu se o usuário clicar em qualquer lugar fora dele
-document.addEventListener('click', (event) => {
-    const clickedOutside = !mobileMenu.contains(event.target) && !hamburger.contains(event.target);
-    if (clickedOutside) {
-        closeMenu();
-    }
-});
-
-// Fecha o menu ao apertar Esc (acessibilidade via teclado)
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-        closeMenu();
-    }
-});
-
-// Fecha o menu ao clicar em um dos links (evita ele ficar aberto após navegar)
-document.querySelectorAll('#mobile_nav_list a').forEach((link) => {
-    link.addEventListener('click', closeMenu);
-});
-
-// Controla o efeito de hover no card da hero section
-
-const heroCard = document.querySelector('.hero-card');
-
-heroCard.addEventListener('mousemove', (e) => {
-    const rect = heroCard.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    // luz (já existente)
-    heroCard.style.setProperty('--mouse-x', `${x}px`);
-    heroCard.style.setProperty('--mouse-y', `${y}px`);
-
-    // NOVO: inclinação baseada na distância até o centro do card
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateY = ((x - centerX) / centerX) * 4;   // até 4° pros lados
-    const rotateX = ((y - centerY) / centerY) * -4;  // até 4° pra cima/baixo (invertido)
-
-    heroCard.style.setProperty('--rotate-x', `${rotateX}deg`);
-    heroCard.style.setProperty('--rotate-y', `${rotateY}deg`);
-});
-
-heroCard.addEventListener('mouseleave', () => {
-    heroCard.style.setProperty('--rotate-x', '0deg');
-    heroCard.style.setProperty('--rotate-y', '0deg');
-});
-
-
-
+motionPreference.addEventListener('change', setupEntrances);
+setupEntrances();

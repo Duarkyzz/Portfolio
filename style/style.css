@@ -1,17 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {     
-    font-family: 'Geist', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: linear-gradient(
-    135deg,
-    #0F172A,
-    #1B1230,
-    #151515
-);
-}
+/* Base: cores, tipografia e elementos compartilhados. */
+:root{color-scheme:dark;--bg:#100e19;--panel:#1a1628;--text:#f4effc;--muted:#b7afc6;--accent:#d5b5ff;--border:#ffffff16}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(ellipse at 90% 10%,#38204b55,transparent 40%),var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit}img{display:block;max-width:100%}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.12;letter-spacing:-.045em}p{color:var(--muted)}a,button{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:6px}a:hover{color:var(--accent)}.shell{width:min(1180px,calc(100% - 64px));margin-inline:auto}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.17em;color:var(--accent)}.section{padding:85px 0;border-top:1px solid var(--border);scroll-margin-top:20px}.button{min-height:48px;padding:13px 20px;display:inline-flex;align-items:center;justify-content:center;gap:20px;border-radius:9px;font-size:13px;font-weight:650;transition:background .2s,transform .2s}.button:hover{transform:translateY(-2px)}.primary{background:var(--accent);color:#221230}.primary:hover{background:#e4ceff;color:#221230}.secondary{border:1px solid #ffffff26;background:#ffffff04}.text-link{display:inline-block;margin-top:25px;color:var(--accent);font-size:14px;border-bottom:1px solid #d5b5ff55;padding-bottom:4px}.tag{display:inline-block;font-size:11px;color:#c6bdd6;border:1px solid var(--border);border-radius:20px;padding:4px 10px}.skip-link{position:fixed;top:-80px;left:20px;z-index:100;background:var(--accent);color:var(--bg);padding:12px}.skip-link:focus{top:10px}
+@media(max-width:600px){.shell{width:calc(100% - 36px)}.section{padding:55px 0}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
