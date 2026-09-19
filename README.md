@@ -24,5 +24,23 @@ Verificados: destinos internos, existência dos recursos locais, IDs únicos, um
 
 O ZIP contém os arquivos do site, sem metadados do Git. Para atualizar seu repositório, copie estes arquivos para sua pasta de trabalho, mantendo a pasta .git que já existe nela.
 
+<<<<<<< HEAD
 ## Animações suaves
 Entrada das seções ao rolar, flutuação discreta da foto e feedback nos cartões e botões. As entradas acontecem uma única vez. A preferência do sistema por movimento reduzido desativa as animações, inclusive se alterada durante a visita. Sem JavaScript, todo o conteúdo permanece visível. CodePulse é apresentado como projeto em fase inicial.
+=======
+- Página inicial com apresentação
+- Seção sobre mim
+- Apresentação de habilidades
+- Projetos desenvolvidos
+- Links para contato e redes profissionais
+- Design responsivo
+
+## 🎨 Design
+
+O projeto possui uma interface personalizada, com foco em uma
+experiência visual moderna e minimalista.
+
+## 💻 Link para acessar o site!!
+
+https://duarkyzz.github.io/Portfolio/
+>>>>>>> 438e7e9f1bec492d44fba380c7caacaca84a1241
