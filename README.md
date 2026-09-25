@@ -1,36 +1,8 @@
 # 👨‍💻 Eduardo Queiroz — Python & Automações
 
-<<<<<<< HEAD
-Portfólio estático em HTML, CSS e JavaScript. Extraia a pasta e abra index.html no navegador. Não exige instalação nem servidor.
-
-## O que mudou
-- Identidade escura e roxa preservada, com cartões translúcidos e layout em grid.
-- Apresentação direcionada a Python e automações.
-- Seções reais de automações, projetos pessoais, sobre e contato.
-- Menu mobile corrigido, com fechamento por Escape, clique fora e navegação.
-- Links acessíveis pelo teclado e navegação disponível mesmo sem JavaScript.
-- Foto em WebP para carregamento mais leve; original preservada nos arquivos.
-- Fontes do sistema e tecnologias em texto, sem depender de imagens externas.
-
-## Onde editar
-- index.html: textos, projetos, telefone do WhatsApp e currículo.
-- style/style.css: cores, fontes e estilos compartilhados.
-- style/header.css: composição das seções e regras para telas menores.
-- src/javascript/script.js: menu do celular.
-
-Os serviços são ideias de demandas a desenvolver, não cases de clientes. StatusWatch e CodePulse estão apresentados como projetos pessoais. O currículo é o PDF original enviado e pode precisar de atualização antes de divulgar a página.
-
-## Verificação desta revisão
-Verificados: destinos internos, existência dos recursos locais, IDs únicos, um H1 e sintaxe JavaScript. Validação visual e interações em navegador ficaram pendentes por indisponibilidade do navegador de testes. Confira em desktop e celular antes de publicar. Nenhuma publicação foi realizada.
-
-O ZIP contém os arquivos do site, sem metadados do Git. Para atualizar seu repositório, copie estes arquivos para sua pasta de trabalho, mantendo a pasta .git que já existe nela.
-
-## Animações suaves
-Entrada das seções ao rolar, flutuação discreta da foto e feedback nos cartões e botões. As entradas acontecem uma única vez. A preferência do sistema por movimento reduzido desativa as animações, inclusive se alterada durante a visita. Sem JavaScript, todo o conteúdo permanece visível. CodePulse é apresentado como projeto em fase inicial.
-=======
 Meu portfólio pessoal, desenvolvido para apresentar meus projetos, habilidades e evolução como desenvolvedor, com foco principalmente em **Python, automações e desenvolvimento backend**.
 
-🔗 **Acesse o portfólio:**
+🔗 **Acesse o portfólio:**  
 https://duarkyzz.github.io/Portfolio/
 
 ## 🚀 Sobre o projeto
@@ -75,17 +47,19 @@ Os serviços apresentados representam **tipos de soluções que posso desenvolve
 
 ### 📡 StatusWatch
 
-Projeto desenvolvido em Python para monitoramento de sites e APIs.
+Aplicação desktop desenvolvida em **Python** para monitoramento de sites e serviços.
 
-O sistema verifica disponibilidade, código HTTP e tempo de resposta, além de armazenar o histórico das verificações.
+O sistema permite cadastrar usuários, realizar autenticação e monitorar URLs através de um dashboard, verificando disponibilidade, código HTTP e tempo de resposta. As verificações são armazenadas em PostgreSQL e mantidas em um histórico associado ao usuário autenticado.
 
 **Tecnologias:** Python, PostgreSQL, Supabase, PySide6 e Requests.
+
+🚀 **Primeira versão Beta lançada em 24/09/2026.** O projeto permanece em desenvolvimento.
 
 ### 🔍 CodePulse
 
 Projeto em Python voltado para análise de repositórios e código, com a proposta de identificar informações sobre estrutura, documentação, dependências, qualidade e possíveis problemas dentro de um projeto.
 
-O projeto está atualmente em desenvolvimento.
+O projeto está atualmente pausado.
 
 ## 📁 Estrutura
 
@@ -121,11 +95,10 @@ no navegador.
 
 ## 📬 Contato
 
-Estou estudando e desenvolvendo novos projetos com foco em **Python, backend e automações**, além de buscar oportunidades para aplicar esses conhecimentos em projetos reais.
+Estou estudando e desenvolvendo projetos com foco em **Python, backend e automações**, além de buscar oportunidades para aplicar esses conhecimentos em projetos reais.
 
 Meus contatos e redes profissionais estão disponíveis diretamente pelo portfólio.
 
 ---
 
 Feito por **Eduardo Queiroz** 🚀
->>>>>>> dcfca2974195c1f263d8804d07cfb6ed7a43c103
